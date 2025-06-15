@@ -26,18 +26,6 @@ init-app: | copy-env create-symlink up print-urls
 copy-env:
 	@ [ ! -f .env ] && cp .env.example .env || true
 
-# .PHONY: set-permissions
-# set-permissions:
-# 	@chmod -R 777 ./logger/.log
-# 	@chmod g+s ./logger/.log
-# .PHONY: install-tailwind
-# npm install -D tailwindcss@latest
-#npm install -D tailwindcss@latest
-
-
-
-
-
 .PHONY: create-symlink
 create-symlink:
 	@ [ -L .docker/.env ] || ln -s ../.env .docker/.env
@@ -111,3 +99,9 @@ init-tes:
 .PHONY: shell
 shell:
 	$(DOCKER_COMPOSE) exec --user pablogarciajc php_apache_$(PROJECT_PREFIX) /bin/sh -c "cd /var/www/html/; exec bash -l"
+
+.PHONY: compile-ts
+compile-ts:
+	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) env NO_UPDATE_NOTIFIER=1 npx tsc app.ts
+
+
