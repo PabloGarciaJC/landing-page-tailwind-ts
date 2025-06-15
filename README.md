@@ -1,6 +1,9 @@
-# CMS Clon-Makro
+# Landing Page – Tailwind + TypeScript
 
-Este proyecto es un clon del sitio web de **Makro**, desarrollado como un sistema de gestión de contenidos (CMS). Su propósito es replicar la estructura y funcionalidades principales de la plataforma original para fines educativos, de práctica o desarrollo personalizado.
+Este proyecto es una landing page creada usando Tailwind CSS y TypeScript, tomando como base un diseño inspirado en ideas encontradas en Pinterest.
+El objetivo principal es practicar la construcción de una interfaz moderna, responsive y escalable, aplicando buenas prácticas de desarrollo frontend.
+
+Este proyecto sirve como base para futuros desarrollos donde se puedan integrar otras tecnologías, funcionalidades o frameworks.
 
 ## Contáctame / Sígueme en mis redes sociales
 
