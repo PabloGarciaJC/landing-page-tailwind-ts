@@ -4,15 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PabloGarciaJC | Agencia Web</title>
+  <title>Landing Page | Tailwind-Ts </title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brand: '#2563eb', // azul
-            accent: '#f97316', // naranja
+            brand: '#2563eb',        
+            accent: '#f97316',       
+            madera: '#4b3b2a',       
+            'madera-clara': '#a65d2d', 
+            'madera-oscura': '#864421', 
+            'madera-mas-oscura': '#3a2e20'
           }
         }
       }
@@ -22,11 +26,10 @@
 
 <body class="bg-white text-gray-800 font-sans scroll-smooth">
 
-  <!-- Header -->
   <header class="sticky top-0 z-50 bg-white shadow-sm">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-6">
       <div class="flex items-center gap-8">
-        <h1 class="text-2xl font-bold text-brand">PabloGarciaJC</h1>
+        <h1 class="text-2xl font-bold text-madera-clara">PabloGarciaJC</h1>
         <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
@@ -43,24 +46,26 @@
         </nav>
       </div>
       <a href="#contacto"
-        class="hidden md:inline-block bg-accent text-white px-5 py-2 rounded-full hover:bg-orange-600 transition">
+        class="hidden md:inline-block bg-madera-clara text-white px-5 py-2 rounded-full hover:bg-madera-oscura transition">
         Solicita una propuesta
       </a>
     </div>
   </header>
 
-  <section id="inicio" class="bg-blue-50 py-28 text-center">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-5xl font-extrabold mb-6 text-gray-900">Soluciones web para negocios modernos</h2>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        En <strong>PabloGarciaJC</strong> ayudamos a empresas y emprendedores a crear sitios web, tiendas online y
-        plataformas personalizadas que impulsan resultados reales.
+  <section id="inicio" class="py-28 text-center bg-blue-600 bg-cover bg-center relative"
+    style="background-image: url('assets/img-home.jpg');">
+    <div class="max-w-4xl mx-auto px-4 relative z-10">
+      <h2 class="text-5xl font-extrabold mb-6 text-white drop-shadow-lg">Soluciones web para negocios modernos</h2>
+      <p class="text-xl text-white font-medium mb-8 leading-relaxed drop-shadow-md">
+        En <strong class="font-semibold text-white">PabloGarciaJC</strong> ayudamos a empresas y emprendedores a crear
+        sitios web, tiendas online y plataformas personalizadas que impulsan resultados reales.
       </p>
       <a href="#contacto"
-        class="inline-block bg-brand text-white px-8 py-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+        class="inline-block bg-white text-brand font-semibold px-8 py-3 rounded-full shadow-lg drop-shadow-md hover:bg-gray-100 transition duration-300">
         Trabajemos juntos
       </a>
     </div>
+    <div class="absolute inset-0 bg-black opacity-70"></div>
   </section>
 
   <section id="servicios" class="py-24 bg-white">
@@ -84,37 +89,36 @@
       </div>
     </div>
   </section>
-
-  <section id="portafolio" class="py-20 bg-gray-100">
+  <section id="portafolio" class="py-20 bg-madera">
     <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-3xl font-bold text-center mb-12">Portafolio</h3>
+      <h3 class="text-3xl font-bold text-center mb-12 text-white">Portafolio</h3>
       <div class="grid md:grid-cols-3 gap-8">
         <a href="https://pablogarciajc.com/ecommerce" target="_blank"
-          class="block bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden no-underline">
+          class="block bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
           <img src="https://pablogarciajc.com/wp-content/uploads/2025/01/ecommerce_1_webp.png" alt="CMS Ecommerce"
             class="w-full h-48 object-cover" />
           <div class="p-5">
             <h4 class="text-xl font-semibold mb-2 text-gray-900">CMS – Ecommerce</h4>
-            <p class="text-gray-600">Desarrollo de tienda online con catálogo, pasarela de pagos y diseño responsive.
+            <p class="text-gray-700">Desarrollo de tienda online con catálogo, pasarela de pagos y diseño responsive.
             </p>
           </div>
         </a>
-        <a href="#" class="block bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden no-underline">
-          <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500 text-sm italic">
+        <a href="#" class="block bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+          <div class="w-full h-48 bg-gray-300 flex items-center justify-center text-gray-600 text-sm italic">
             Imagen en desarrollo
           </div>
           <div class="p-5">
             <h4 class="text-xl font-semibold mb-2 text-gray-900">Sistema de Finanzas para el Hogar</h4>
-            <p class="text-gray-600">App web para gestionar ingresos, gastos y presupuestos familiares fácilmente.</p>
+            <p class="text-gray-700">App web para gestionar ingresos, gastos y presupuestos familiares fácilmente.</p>
           </div>
         </a>
         <a href="https://pablogarciajc.com/red-social" target="_blank"
-          class="block bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden no-underline">
+          class="block bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
           <img src="https://pablogarciajc.com/wp-content/uploads/2025/01/red_social_1_webp.webp" alt="Red Social"
             class="w-full h-48 object-cover" />
           <div class="p-5">
             <h4 class="text-xl font-semibold mb-2 text-gray-900">Red Social</h4>
-            <p class="text-gray-600">Plataforma social con perfiles, publicaciones, comentarios y notificaciones.</p>
+            <p class="text-gray-700">Plataforma social con perfiles, publicaciones, comentarios y notificaciones.</p>
           </div>
         </a>
       </div>
@@ -131,26 +135,27 @@
     </div>
   </section>
 
-  <section id="contacto" class="py-24 bg-blue-50">
+  <section id="contacto" class="py-24 bg-madera">
     <div class="max-w-xl mx-auto px-4 text-center">
-      <h3 class="text-4xl font-bold mb-6">¿Hablamos?</h3>
-      <p class="text-gray-600 mb-6">Cuéntanos sobre tu proyecto y te enviaremos una propuesta personalizada.</p>
+      <h3 class="text-4xl font-bold mb-6 text-white">¿Hablamos?</h3>
+      <p class="text-gray-200 mb-6">Cuéntanos sobre tu proyecto y te enviaremos una propuesta personalizada.</p>
       <form class="space-y-5">
         <input type="text" placeholder="Nombre"
-          class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand" />
+          class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand bg-white text-gray-800" />
         <input type="email" placeholder="Correo electrónico"
-          class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand" />
+          class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand bg-white text-gray-800" />
         <textarea placeholder="Mensaje" rows="4"
-          class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand"></textarea>
+          class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand bg-white text-gray-800"></textarea>
         <button type="submit"
-          class="w-full bg-brand text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300">
+          class="w-full bg-madera-clara text-white px-6 py-3 rounded-full hover:bg-madera-oscura transition duration-300">
           Enviar mensaje
         </button>
+
       </form>
     </div>
   </section>
 
-  <footer class="bg-gray-800 text-white py-6 text-center">
+  <footer class="bg-madera-mas-oscura text-white py-6 text-center">
     <p class="text-sm">© 2025 PabloGarciaJC. Agencia Web. Todos los derechos reservados.</p>
   </footer>
 
