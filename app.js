@@ -1,6 +1,6 @@
 
-const menuBtn = document.getElementById("menu-btn") as HTMLButtonElement;
-const menu = document.getElementById("menu") as HTMLElement;
+let menuBtn = document.getElementById("menu-btn") as HTMLButtonElement;
+let menu = document.getElementById("menu") as HTMLElement;
 
 menuBtn.addEventListener("click", () => {
     if (menu.classList.contains("hidden")) {

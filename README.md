@@ -1,9 +1,8 @@
 # Landing Page – Tailwind + TypeScript
 
-Este proyecto es una landing page creada usando Tailwind CSS y TypeScript, tomando como base un diseño inspirado en ideas encontradas en Pinterest.
-El objetivo principal es practicar la construcción de una interfaz moderna, responsive y escalable, aplicando buenas prácticas de desarrollo frontend.
+Este proyecto fue desarrollado como parte de mi portafolio personal, con el objetivo de aplicar y consolidar los conocimientos adquiridos en el curso de Platzi [“Curso de Tailwind CSS”](https://platzi.com/p/PabloGarcia/curso/11886-course/diploma/detalle/).
 
-Este proyecto sirve como base para futuros desarrollos donde se puedan integrar otras tecnologías, funcionalidades o frameworks.
+Además, sirve como una base sólida para futuros desarrollos, en los que se podrán integrar nuevas tecnologías, funcionalidades o frameworks.
 
 ## Contáctame / Sígueme en mis redes sociales
 
