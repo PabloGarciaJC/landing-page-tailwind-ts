@@ -1,8 +1,29 @@
 # Landing Page – Tailwind + TypeScript
 
-Este proyecto fue desarrollado como parte de mi portafolio personal, con el objetivo de aplicar y consolidar los conocimientos adquiridos en el curso de Platzi [“Curso de Tailwind CSS”](https://platzi.com/p/PabloGarcia/curso/11886-course/diploma/detalle/).
 
-Además, sirve como una base sólida para futuros desarrollos, en los que se podrán integrar nuevas tecnologías, funcionalidades o frameworks.
+Landing page moderna y responsive desarrollada con **Tailwind CSS** y **TypeScript**, pensada como base escalable para integrar futuras funcionalidades, tecnologías o frameworks. 
+
+---
+
+## Funcionalidades principales
+
+- Sitio web completamente responsive y moderno.
+- Menú de navegación adaptable para dispositivos móviles y escritorio.
+- Secciones integradas: Inicio, Nosotros, Servicios, Portafolio y Contacto.
+- Formulario de contacto estilizado.
+- Base escalable para integración con CMS u otras tecnologías frontend.
+- Estilos personalizados usando configuración extendida de Tailwind (via CDN).
+
+---
+
+## Tecnologías utilizadas
+
+- **Tailwind CSS** (vía CDN con configuración extendida en el `<head>`).
+- **HTML5 semántico**.
+- **TypeScript** (configurado como dependencia de desarrollo).
+- Entorno preparado para escalar hacia herramientas como Vite o React.
+
+---
 
 ## Contáctame / Sígueme en mis redes sociales
 
