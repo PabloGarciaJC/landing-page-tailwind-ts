@@ -1,17 +1,21 @@
 # Landing Page – Tailwind + TypeScript
 
+Landing page desarrollada con **Tailwind CSS** y **TypeScript**, pensada como base escalable para integrar futuras funcionalidades, tecnologías o frameworks.
 
-Landing page moderna y responsive desarrollada con **Tailwind CSS** y **TypeScript**, pensada como base escalable para integrar futuras funcionalidades, tecnologías o frameworks. 
+## Demo del Proyecto
+
+[https://landing-page-tailwind-ts.pablogarciajc.com/](https://landing-page-tailwind-ts.pablogarciajc.com/)
+
+| ![Imagen 1](https://pablogarciajc.com/wp-content/uploads/2025/06/landing-page-tailwind-ts.png) | ![Imagen 2](https://pablogarciajc.com/wp-content/uploads/2025/06/landing-page-tailwind-ts-2.png) |
+|-----------|-----------|
 
 ---
 
 ## Funcionalidades principales
 
-- Sitio web completamente responsive y moderno.
 - Menú de navegación adaptable para dispositivos móviles y escritorio.
 - Secciones integradas: Inicio, Nosotros, Servicios, Portafolio y Contacto.
 - Formulario de contacto estilizado.
-- Base escalable para integración con CMS u otras tecnologías frontend.
 - Estilos personalizados usando configuración extendida de Tailwind (via CDN).
 
 ---
@@ -31,10 +35,10 @@ Landing page moderna y responsive desarrollada con **Tailwind CSS** y **TypeScri
 |--------------|----------------------------------------------------------|--------------------------|
 | **Facebook** | Conéctate y mantente al tanto de mis actualizaciones.    | [Presiona aquí](https://facebook.com/tu-usuario) |
 | **YouTube**  | Fundamentos de la programación, tutoriales y noticias.   | [Presiona aquí](https://youtube.com/tu-canal)     |
-| **Página Web** | Más información sobre mis proyectos y servicios.        | [Presiona aquí](https://tusitio.com)              |
+| **Página Web** | Más información sobre mis proyectos y servicios.       | [Presiona aquí](https://tusitio.com)              |
 | **LinkedIn** | Sigue mi carrera profesional y establece conexiones.     | [Presiona aquí](https://linkedin.com/in/tu-usuario) |
-| **Instagram**| Fotos, proyectos y contenido relacionado.                 | [Presiona aquí](https://instagram.com/tu-usuario) |
-| **Twitter**  | Proyectos, pensamientos y actualizaciones.                | [Presiona aquí](https://twitter.com/tu-usuario)   |
+| **Instagram**| Fotos, proyectos y contenido relacionado.                | [Presiona aquí](https://instagram.com/tu-usuario) |
+| **Twitter**  | Proyectos, pensamientos y actualizaciones.               | [Presiona aquí](https://twitter.com/tu-usuario)   |
 
 ---
 > _"El buen manejo de tus finanzas hoy construye la seguridad del mañana."_
