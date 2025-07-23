@@ -4,7 +4,7 @@ Landing page desarrollada con **Tailwind CSS** y **TypeScript**, pensada como ba
 
 ## Demo del Proyecto
 
-[https://landing-page-tailwind-ts.pablogarciajc.com/](https://landing-page-tailwind-ts.pablogarciajc.com/)
+[https://landing-page-tailwind-ts.com/](https://landing-page-tailwind-ts.pablogarciajc.com/)
 
 | ![Imagen 1](https://pablogarciajc.com/wp-content/uploads/2025/06/landing-page-tailwind-ts.png) | ![Imagen 2](https://pablogarciajc.com/wp-content/uploads/2025/06/landing-page-tailwind-ts-2.png) |
 |-----------|-----------|
