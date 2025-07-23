@@ -27,6 +27,32 @@ Landing page desarrollada con **Tailwind CSS** y **TypeScript**, pensada como ba
 - **TypeScript** (configurado como dependencia de desarrollo).
 - Entorno preparado para escalar hacia herramientas como Vite o React.
 
+## Instalación
+
+### Requisitos Previos
+
+- Tener **Docker** y **Docker Compose** instalados.
+- **Make**: Utilizado para automatizar procesos y gestionar contenedores de manera más eficiente.
+
+### Pasos de Instalación
+
+1. Clona el repositorio desde GitHub.
+2. Dentro del repositorio, encontrarás un archivo **Makefile** que contiene los comandos necesarios para iniciar y gestionar tu aplicación.
+3. Usa los siguientes comandos de **Make** para interactuar con la aplicación:
+
+   - **`make init-app`**: Inicializa los contenedores y configura la aplicación.
+   - **`make up`**: Levanta la aplicación y sus contenedores asociados.
+   - **`make down`**: Detiene los contenedores y apaga la aplicación.
+   - **`make shell`**: Ingresa al contenedor para interactuar directamente con el sistema en su entorno de ejecución.
+   - **`make install-dependencies`**: Instala todas las dependencias necesarias para disponer del sistema de logs y ejecutar pruebas.
+   - **`make init-test`**: Ejecuta las pruebas unitarias y de integración.
+
+4. Además de estos comandos, dentro del archivo **Makefile** puedes encontrar otros comandos que te permitirán interactuar de manera más específica con los contenedores y los diferentes servicios que conforman la aplicación.
+
+5. Accede a los siguientes URL:
+   - **Aplicación Web**: [http://localhost:8081/](http://localhost:8081/)
+   - **PhpMyAdmin**: [http://localhost:8082/](http://localhost:8082/)
+
 ---
 
 ## Contáctame / Sígueme en mis redes sociales
