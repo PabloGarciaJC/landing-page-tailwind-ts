@@ -20,7 +20,7 @@ DOCKER_COMPOSE = docker compose -f ./.docker/docker-compose.yml
 ## ---------------------------------------------------------
 
 .PHONY: init-app
-init-app: | copy-env create-symlink up print-urls
+init-app: | copy-env create-symlink up install-ts print-urls
 
 .PHONY: copy-env
 copy-env:
@@ -29,6 +29,10 @@ copy-env:
 .PHONY: create-symlink
 create-symlink:
 	@ [ -L .docker/.env ] || ln -s ../.env .docker/.env
+
+.PHONY: install-ts
+install-ts:
+	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) npm install -y --save-dev typescript ts-node @types/node
 
 .PHONY: print-urls
 print-urls:
@@ -99,10 +103,6 @@ init-tes:
 .PHONY: shell
 shell:
 	$(DOCKER_COMPOSE) exec --user pablogarciajc php_apache_$(PROJECT_PREFIX) /bin/sh -c "cd /var/www/html/; exec bash -l"
-
-.PHONY: install-ts
-install-ts:
-	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) npm install -y --save-dev typescript ts-node @types/node
 
 .PHONY: compile-ts
 compile-ts:
