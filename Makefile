@@ -32,15 +32,16 @@ copy-env:
 create-symlink:
 	@ [ -L .docker/.env ] || ln -s ../.env .docker/.env
 
-.PHONY: install-gsap
-install-gsap:
-	@echo "Instalando GSAP y ScrollTrigger en contenedor php_apache_$(PROJECT_PREFIX)"
-	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) npm install gsap
-
 .PHONY: install-ts
 install-ts:
 	@echo "Instalando TypeScript en contenedor php_apache_$(PROJECT_PREFIX)"
 	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) npm install --save-dev typescript ts-node @types/node
+
+.PHONY: install-gsap
+install-gsap:
+	@echo "Instalando GSAP y tipos en contenedor php_apache_$(PROJECT_PREFIX)"
+	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) npm install gsap
+	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) npm install --save-dev @types/gsap
 
 .PHONY: print-urls
 print-urls:
