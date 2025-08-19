@@ -7,6 +7,8 @@ ifneq (,$(wildcard .env))
   export
 endif
 
+# Valor por defecto si no está definido en .env
+PROJECT_NAME ?= landingpagetailtype
 PROJECT_PREFIX ?= $(PROJECT_NAME)
 
 ## ---------------------------------------------------------
@@ -32,7 +34,8 @@ create-symlink:
 
 .PHONY: install-ts
 install-ts:
-	$(DOCKER_COMPOSE) run --rm php_apache_$(PROJECT_PREFIX) npm install --save-dev typescript ts-node @types/node
+	@echo "Instalando TypeScript en contenedor php_apache_$(PROJECT_PREFIX)"
+	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) npm install --save-dev typescript ts-node @types/node
 
 .PHONY: print-urls
 print-urls:
@@ -107,6 +110,3 @@ shell:
 .PHONY: compile-ts
 compile-ts:
 	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) env NO_UPDATE_NOTIFIER=1 npx tsc
-
-
-
