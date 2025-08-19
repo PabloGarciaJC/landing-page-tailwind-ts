@@ -32,7 +32,7 @@ create-symlink:
 
 .PHONY: install-ts
 install-ts:
-	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) npm install -y --save-dev typescript ts-node @types/node
+	$(DOCKER_COMPOSE) run --rm php_apache_$(PROJECT_PREFIX) npm install --save-dev typescript ts-node @types/node
 
 .PHONY: print-urls
 print-urls:
