@@ -100,8 +100,13 @@ init-tes:
 shell:
 	$(DOCKER_COMPOSE) exec --user pablogarciajc php_apache_$(PROJECT_PREFIX) /bin/sh -c "cd /var/www/html/; exec bash -l"
 
+.PHONY: install-ts
+install-ts:
+	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) npm install -y --save-dev typescript ts-node @types/node
+
 .PHONY: compile-ts
 compile-ts:
-	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) env NO_UPDATE_NOTIFIER=1 npx tsc app.ts
+	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) env NO_UPDATE_NOTIFIER=1 npx tsc
+
 
 
