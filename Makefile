@@ -22,7 +22,7 @@ DOCKER_COMPOSE = docker compose -f ./.docker/docker-compose.yml
 ## ---------------------------------------------------------
 
 .PHONY: init-app
-init-app: | copy-env create-symlink up install-ts print-urls
+init-app: | copy-env create-symlink up install-ts install-gsap print-urls
 
 .PHONY: copy-env
 copy-env:
@@ -31,6 +31,11 @@ copy-env:
 .PHONY: create-symlink
 create-symlink:
 	@ [ -L .docker/.env ] || ln -s ../.env .docker/.env
+
+.PHONY: install-gsap
+install-gsap:
+	@echo "Instalando GSAP y ScrollTrigger en contenedor php_apache_$(PROJECT_PREFIX)"
+	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) npm install gsap
 
 .PHONY: install-ts
 install-ts:
