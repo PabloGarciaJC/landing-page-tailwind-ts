@@ -22,7 +22,7 @@ DOCKER_COMPOSE = docker compose -f ./.docker/docker-compose.yml
 ## ---------------------------------------------------------
 
 .PHONY: init-app
-init-app: | copy-env create-symlink up install-ts install-gsap print-urls
+init-app: | copy-env create-symlink up install-ts print-urls
 
 .PHONY: copy-env
 copy-env:
@@ -36,12 +36,6 @@ create-symlink:
 install-ts:
 	@echo "Instalando TypeScript en contenedor php_apache_$(PROJECT_PREFIX)"
 	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) npm install --save-dev typescript ts-node @types/node
-
-.PHONY: install-gsap
-install-gsap:
-	@echo "Instalando GSAP y tipos en contenedor php_apache_$(PROJECT_PREFIX)"
-	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) npm install gsap
-	$(DOCKER_COMPOSE) exec php_apache_$(PROJECT_PREFIX) npm install --save-dev @types/gsap
 
 .PHONY: print-urls
 print-urls:
