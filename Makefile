@@ -22,7 +22,7 @@ DOCKER_COMPOSE = docker compose -f ./.docker/docker-compose.yml
 ## ---------------------------------------------------------
 
 .PHONY: init-app
-init-app: | copy-env create-symlink up install-ts print-urls
+init-app: | copy-env create-symlink up install-ts compile-ts print-urls
 
 .PHONY: copy-env
 copy-env:
