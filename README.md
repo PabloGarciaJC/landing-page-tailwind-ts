@@ -1,6 +1,6 @@
 # Landing Page – Tailwind + TypeScript
 
-Landing page desarrollada con **Tailwind CSS** y **TypeScript**, pensada como base escalable para integrar futuras funcionalidades, tecnologías o frameworks.
+Landing page desarrollada con **Tailwind CSS** y **TypeScript**, pensada como base escalable para integrar futuras funcionalidades, tecnologías o frameworks. Animaciones implementadas con Intersection Observer sin dependencias externas.
 
 ## Demo del Proyecto
 
@@ -27,6 +27,14 @@ Landing page desarrollada con **Tailwind CSS** y **TypeScript**, pensada como ba
 - **TypeScript** (configurado como dependencia de desarrollo).
 - Entorno preparado para escalar hacia herramientas como Vite o React.
 
+---
+
+## Animaciones
+
+- Las animaciones se aplican dinámicamente a los elementos al entrar en el viewport.​
+- Uso de IntersectionObserver para detectar la visibilidad y activar las animaciones.​
+- Animaciones definidas con @keyframes y transiciones CSS para efectos suaves y fluidos.​
+  
 ---
 
 ## Instalación
