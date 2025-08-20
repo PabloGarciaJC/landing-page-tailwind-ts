@@ -1,35 +1,59 @@
-import gsap from 'gsap';
+class App {
+  onReady(): void {
+    this.customApp();
+  }
 
-// Animación del header al cargar la página
-const header = document.querySelector('header');
-if (header) {
-  gsap.from(header, { y: -100, opacity: 0, duration: 1, ease: 'power2.out' });
+  applyAnimationsByDirection(containerSelector: string, direction: string): void {
+    const targets: NodeListOf<Element> = document.querySelectorAll(containerSelector);
+    if (!targets.length) return;
+
+    const observerOptions: IntersectionObserverInit = {
+      threshold: 0.01,
+      rootMargin: "-500px 0px 0px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry: IntersectionObserverEntry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(`animation__slide--${direction}`);
+
+          entry.target.addEventListener(
+            "animationend",
+            () => {
+              entry.target.classList.remove(`animation__slide--${direction}`);
+            },
+            { once: true }
+          );
+
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    targets.forEach(target => observer.observe(target));
+  }
+
+  customApp(): void {
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    if (menuBtn && menu) {
+      menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+    }
+
+    this.applyAnimationsByDirection(".animation__left", "left");
+    this.applyAnimationsByDirection(".animation__right", "right");
+    this.applyAnimationsByDirection(".animation__fade-in-upscale", "fade-in-upscale");
+    this.applyAnimationsByDirection(".animation__up", "up");
+    this.applyAnimationsByDirection(".animation__down", "down");
+  }
+
+  init(): void {
+    this.onReady();
+  }
 }
 
-// Animación del hero al cargar
-const heroTitle = document.querySelector('#inicio h2');
-const heroText = document.querySelector('#inicio p');
-const heroBtn = document.querySelector('#inicio a');
-
-if (heroTitle && heroText && heroBtn) {
-  gsap.from(heroTitle, { y: 50, opacity: 0, duration: 1, delay: 0.5, ease: 'power2.out' });
-  gsap.from(heroText, { y: 50, opacity: 0, duration: 1, delay: 0.7, ease: 'power2.out' });
-  gsap.from(heroBtn, { scale: 0.8, opacity: 0, duration: 0.8, delay: 1, ease: 'back.out(1.7)' });
-}
-
-// Animaciones al hacer scroll para secciones
-const sections = document.querySelectorAll('section');
-
-sections.forEach((section) => {
-  gsap.from(section, {
-    scrollTrigger: {
-      trigger: section,
-      start: 'top 80%',
-    },
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    ease: 'power2.out',
-    stagger: 0.2
-  });
-});
+const app = new App();
+app.init();
