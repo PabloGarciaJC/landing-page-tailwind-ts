@@ -1,4 +1,4 @@
-# Landing Page – Tailwind + TypeScript
+# Landing Page (Tailwind + TypeScript)
 
 Landing page desarrollada con **Tailwind CSS** y **TypeScript**, pensada como base escalable para integrar futuras funcionalidades, tecnologías o frameworks. Animaciones implementadas con Intersection Observer sin dependencias externas.
 
